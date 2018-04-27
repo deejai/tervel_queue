@@ -73,6 +73,9 @@ int main(int argc, char **argv) {
     log("Info", "Sequential Sanity Check Complete");
     exit(0);
   }
+  else {
+    std::cout << "FAHJKHJKDSLGF\nHJ\nDSL\nKFGDFL\nKGD\n\nJHK\nLFGH\nDSJ\n\nHKFGSD" << std::endl;
+  }
 
   // Create PAPI Objects
   #ifdef USE_PAPI

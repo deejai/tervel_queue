@@ -59,8 +59,10 @@ class Queue {
   class Accessor {
    public:
 #ifndef NO_TERVEL
-    static const tervel::util::memory::hp::HazardPointer::SlotID kSlot =
+    static const tervel::util::memory::hp::HazardPointer::SlotID kSlotNode =
       tervel::util::memory::hp::HazardPointer::SlotID::SHORTUSE;
+    static const tervel::util::memory::hp::HazardPointer::SlotID kSlotNext =
+      tervel::util::memory::hp::HazardPointer::SlotID::SHORTUSE2;
 #endif
     Accessor() {};
 

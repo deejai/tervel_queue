@@ -47,7 +47,7 @@ ifeq ($(OS), Darwin)
 LIB = $(cLIB) -ldl -lgflags -lpthread
 else
 # Linux
-LIB = $(cLIB) -ldl -lgflags -lpthread -lrt
+LIB = $(cLIB) -ldl -lgflags -lpthread -lrt -g
 endif
 
 # LIB += -lrt /usr/local/lib/libpapi.a
@@ -79,7 +79,8 @@ tervelQueueLF:
 	$(MAKE) test input="tervel_api/lf_queue_api.h" output="queue_tervel_lf.x" cSources=$(tervelSources) cINC=$(tervelINC) cFlags=$(tervelFlags)
 
 test-seq-lf:
-	echo "TODO: implement"
+	$(MAKE) test input="tervel_api/lf_queue_api.h" output="queue_tervel_lf.x" cSources=$(tervelSources) cINC=$(tervelINC) cFlags=$(tervelFlags)
+	# echo "TODO: implement"
 
 test-seq-wf:
 	echo "TODO: implement"
